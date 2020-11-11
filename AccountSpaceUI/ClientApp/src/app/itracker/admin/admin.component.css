@@ -1,0 +1,40 @@
+
+
+
+:host {
+  /*background-color: lightgrey;*/
+  display: block;
+}
+
+.newcard {
+  display: flex;
+  align-items: center;
+  box-shadow: 0.959px 10.958px 36.18px 17.82px rgba(0,0,0,.03);
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  padding: 15px;
+  height:75px;
+  background-color:white;
+}
+
+  .newcard:hover {
+    -webkit-transition: all .5s ease;
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+    box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.3), 0 0 1px 0 rgba(0, 0, 0, 0.25);
+  }
+
+.mat-icon {
+  height: 30px !important;
+  width: 30px !important;
+  font-size: 30px !important;
+  color:deeppink;
+}
+
+.card-image{
+    width:70px;
+    height:60px;
+}
+
+
+

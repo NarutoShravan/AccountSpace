@@ -1,0 +1,47 @@
+<div style="height:100vh;">
+
+
+  <div class="h-100 d-flex justify-content-center align-items-center">
+
+    
+    <form #form='ngForm' autocomplete="off" (submit)="onSubmit(form)" class="login-div">
+      <mat-progress-bar [hidden]="!progress" color="warn" mode="indeterminate"></mat-progress-bar>
+
+      <mat-card>
+        <div class="form-group">
+          <label style="color:#1a73e8;font-size:20px;">Login</label>
+          <hr style="background-color:#1a73e8;height:2px;" />
+        </div>
+        <div class="form-group">
+          <mat-form-field appearance="outline" hideRequiredMarker>
+            <mat-label>UserId</mat-label>
+            <input matInput placeholder="UserId" #UserId="ngModel" name="UserId" [(ngModel)]="loginModel.UserId" required>
+            <mat-icon matSuffix>face</mat-icon>
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <mat-form-field appearance="outline" hideRequiredMarker>
+            <mat-label>Password</mat-label>
+            <input matInput [type]="!hide ? 'password' : 'text'" placeholder="Password" #Password="ngModel" name="Password" [(ngModel)]="loginModel.Password" required>
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+            <!--<mat-error *ngIf="Password.errors.required">Password is <strong>required</strong></mat-error>-->
+          </mat-form-field>
+        </div>
+        <div class="form-group" style="margin-bottom:15px;">
+          <a class="anchor">Forgot Password</a>
+          <div style="margin-top:5px;">
+            <a class="anchor" routerLink="/register" routerLinkActive="active">Register</a>
+            <button mat-raised-button class="btn-login" [disabled]="form.invalid">Login</button>
+          </div>
+        </div>
+
+      </mat-card>
+    </form>
+
+  </div>
+</div>
+
+ 
+
+
+
